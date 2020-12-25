@@ -56,7 +56,7 @@ def clicked():
 
 def show_button_to_forget(ll1, ll2, ll3, ee1, ee2, ee3, my_button1):
     global array_for_Quick_sort
-    global array_for_count
+    
     smallest = 0
     largest = len(array_for_Quick_sort)-1
 
@@ -81,7 +81,7 @@ def show_button_to_forget(ll1, ll2, ll3, ee1, ee2, ee3, my_button1):
                  bg='#CCDDEA', font=('Franklin', 25))
 
     Count = Button(master, text="Count Sort!", bg='#FDA023', height=2, font=("Franklin", 12),
-                   fg='white', width=20, command=lambda: CountSort(array_for_count))
+                   fg='white', width=20, command= CountSort)
 
     Quick_sort = Button(master, text="Quick Sort!", bg='#FDA023', height=2, font=("Franklin", 12),
                         fg='white', width=20, command=lambda: QuickSort(array_for_Quick_sort, smallest, largest))
@@ -123,7 +123,8 @@ def show_button_to_forget(ll1, ll2, ll3, ee1, ee2, ee3, my_button1):
     # clear_button.grid(row=12, column=0, pady=20)
 
 
-def CountSort(array_for_count):
+def CountSort():
+    global array_for_count
     start_time = timer()
     mx = max(array_for_count)
     nl = [0 for i in range(mx+1)]
@@ -302,7 +303,7 @@ e3 = Entry(master, width=30, font=('Franklin', 15))
 
 # Button to generate array of random numbers
 my_button = Button(master, text="Generate Array", bg='#FDA023', height=2, font=("Franklin", 12),
-                   fg='white', width=40, command=clicked)
+                   fg='white', width=40, command=lambda: clicked())
 
 # Button to start sorting array of random numbers
 Show_Array = Button(master, text="Sort Now!", bg='#FDA023', font=("Franklin", 12), height=2,
