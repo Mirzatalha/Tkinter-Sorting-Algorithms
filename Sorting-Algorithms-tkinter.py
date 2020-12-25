@@ -81,7 +81,7 @@ def show_button_to_forget(ll1, ll2, ll3, ee1, ee2, ee3, my_button1):
                  bg='#CCDDEA', font=('Franklin', 25))
 
     Count = Button(master, text="Count Sort!", bg='#FDA023', height=2, font=("Franklin", 12),
-                   fg='white', width=20, command= CountSort)
+                   fg='white', width=20, command=CountSort)
 
     Quick_sort = Button(master, text="Quick Sort!", bg='#FDA023', height=2, font=("Franklin", 12),
                         fg='white', width=20, command=lambda: QuickSort(array_for_Quick_sort, smallest, largest))
@@ -243,10 +243,6 @@ def show_fun_for_quick():
     global arr_quick
     arr_quick = Label(master, text="This is Quick "+str(array_for_Quick_sort), width=60,
                       height=3).grid(row=4, column=4)
-
-
-
-    
 
 
 # Function to bring previous data on screen
